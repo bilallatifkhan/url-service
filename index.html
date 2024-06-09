@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Our App</title>
+    <script>
+        function redirectToAppStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Check for iOS devices
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "https://apps.apple.com/in/app/washers-the-laundry-hub/id6471975821";  // Replace with your App Store URL
+            }
+            // Check for Android devices
+            else if (/android/i.test(userAgent)) {
+                window.location.href = "https://play.google.com/store/apps/details?id=com.washers.laundryuser";  // Replace with your Play Store URL
+            }
+        }
+
+        window.onload = redirectToAppStore;
+    </script>
+</head>
+
+<body>
+    <h1>Redirecting to the appropriate app store...</h1>
+</body>
+
+</html>
